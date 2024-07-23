@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.calendar-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.calendar-header button:hover {
+    background-color: #0056b3;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 14.28%; /* 100% / 7 */
+}
+
+.calendar td {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.calendar td.inactive {
+    color: #ccc;
+}
+
+
+/* This is the second CSS */
+.date-time {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#current-date {
+    font-weight: bold;
+}
+
+#current-time {
+    font-size: 20px;
+    color: #555;
+}
+
