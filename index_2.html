@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <link rel="stylesheet" href="styles_2.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
     <div class="calendar-container">
@@ -37,19 +39,7 @@
             </tbody>
         </table>
 
-        <!-- This is the reminder section -->
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reminder App</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
     <div class="container">
-        <h1 class="mt-5">Reminder App</h1>
         <form id="reminderForm" class="mb-4">
             <div class="form-group">
                 <label for="reminderInput">New Reminder</label>
@@ -79,11 +69,22 @@
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
                 listItem.innerHTML = `
-                    ${reminderText}
-                    <div>
+                    <!-- ${reminderText} -->
+                    <!-- <div>
                         <button class="btn btn-success btn-sm complete-btn">Complete</button>
                         <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                    </div> -->
+                    <div class="form-group">
+                        <button class="btn btn-success btn-sm complete-btn">Complete</button>
+                        <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+
+                        <label for="reminderDate">Date</label>
+                        <input type="date" class="form-control" id="reminderDate" required>
+                        ${reminderText}
+
                     </div>
+
+
                 `;
 
                 reminderList.appendChild(listItem);
@@ -99,71 +100,7 @@
             }
         });
     </script>
-</body>
-</html>
-
-<!-- The END -->
-
-
-<!-- ANOTHER REMINDER -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reminder App</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-  <div class="container mt-5">
-    <h1 class="text-center">Reminder App</h1>
-    <form id="reminderForm" class="mt-4">
-      <div class="form-group">
-        <label for="reminderText">Reminder Text</label>
-        <input type="text" class="form-control" id="reminderText" placeholder="Enter your reminder" required>
-      </div>
-      <div class="form-group">
-        <label for="reminderDate">Date</label>
-        <input type="date" class="form-control" id="reminderDate" required>
-      </div>
-      <div class="form-group">
-        <label for="reminderTime">Time</label>
-        <input type="time" class="form-control" id="reminderTime" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Set Reminder</button>
-    </form>
-    <div id="reminderList" class="mt-4">
-      <h3>Upcoming Reminders</h3>
-      <ul class="list-group" id="reminderItems"></ul>
-    </div>
-  </div>
-
-  <script>
-    document.getElementById('reminderForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const reminderText = document.getElementById('reminderText').value;
-      const reminderDate = document.getElementById('reminderDate').value;
-      const reminderTime = document.getElementById('reminderTime').value;
-
-      const reminderItem = document.createElement('li');
-      reminderItem.className = 'list-group-item';
-      reminderItem.textContent = `${reminderText} - ${reminderDate} ${reminderTime}`;
-
-      document.getElementById('reminderItems').appendChild(reminderItem);
-
-      // Clear the form
-      document.getElementById('reminderForm').reset();
-    });
-  </script>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-
-
-    </div>
     <script src="script_2.js"></script>
+
 </body>
 </html>
